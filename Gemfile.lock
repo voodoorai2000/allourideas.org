@@ -100,6 +100,7 @@ GEM
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     i18n (0.3.7)
+    iconv (1.0.4)
     inherited_resources (1.0.4)
       has_scope (~> 0.4.2)
       responders (~> 0.4.3)
@@ -207,6 +208,7 @@ DEPENDENCIES
   haml (~> 3.1.7)
   has_scope (= 0.4.2)
   i18n (= 0.3.7)
+  iconv (~> 1.0.3)
   inherited_resources (= 1.0.4)
   jferris-mocha (= 0.9.5.0.1241126838)
   json
