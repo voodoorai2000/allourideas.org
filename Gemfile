@@ -1,5 +1,4 @@
-source :rubygems
-source "http://gems.github.com"
+source 'https://rubygems.org'
 
 gem "rails", "2.3.18"
 gem "rake", "~> 0.9.0"
