@@ -1,5 +1,4 @@
-source :rubygems
-source "http://gems.github.com"
+source 'https://rubygems.org'
 
 gem "rails", "2.3.18"
 gem "rake", "~> 0.9.0"
@@ -36,6 +35,7 @@ gem "compass-rails", "~> 1.0.3"
 gem "bootstrap-sass", "~> 2.1.1.0"
 gem "mysql2", "0.2.18"
 gem "test-unit", "1.2.3"
+gem 'iconv', '~> 1.0.3'
 
 group :development do
   gem "engineyard"
@@ -59,7 +59,6 @@ group :test, :cucumber do
   gem "rspec", "1.3.2"
   gem "rspec-rails", "1.3.4"
   gem "email_spec", "0.4.0"
-  gem "sendgrid", "0.1.4"
   gem "fakeweb", "~>1.2.5"
   gem "jferris-mocha", "0.9.5.0.1241126838", :require => "mocha"
 end
