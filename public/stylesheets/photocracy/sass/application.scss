@@ -1,7 +1,8 @@
+@import "config";
 @import "mixins";
 
 html, body {
-  background: #eee;
+  background: $white;
 }
 
 #hd {
@@ -13,16 +14,10 @@ h1 {
 }
 
 #vs {
-  background: #ccc;
-  color: #fff;
-  padding: 7px 10px;
-  width: 30px;
+  color: #000;
   margin: 0 auto;
   @include rounded(100px);
-  margin-top: 150px;
-  @include box-shadow(2px, 2px, 2px, #fff);
-  font-size: 170%;
-  margin-bottom: 5em;
+  font-size: 6em;
 }
 
 #prompt {
@@ -61,9 +56,7 @@ a.photo_frame {
     }
   }
   
-  img {
-    border: 3px solid #000;
-  }
+ 
   
   &.loading img {
     border: none;
@@ -91,8 +84,7 @@ a.photo_frame:hover {
   padding: 5px;
   font-size: 20px;
   font-weight: bold;
-  @include box-shadow(2px, 2px, 2px, #000);
-  @include rounded(30px);
+
 }
 
 .button {
@@ -105,8 +97,7 @@ a.photo_frame:hover {
   text-shadow: #fff -2px 0px 10px;
   display: inline-block;
   text-decoration: none;
-  @include box-shadow();
-  @include rounded(5px);
+
 }
 
 .button:hover {
@@ -116,23 +107,17 @@ a.photo_frame:hover {
 }
 
 .button.blue {
-  @include marble-fade(#2b6fc0);
-  border: 1px solid #327FDB;
-  color: #fff;
-  text-shadow: #235a9b -2px 0px 10px;
+  color: #000;
 }
 
 .button.blue:hover {
-  @include marble-fade(lighten(#2b6fc0, 5%));
   border: 1px solid #235a9b;
 }
 
 .button.green {
   font-size:20px;
-  @include marble-fade(#698D00);
   border: 1px solid #698D00;
   color: #fff;
-  text-shadow: #666 -2px 0px 10px;
 }
 
 .button.green:hover {
@@ -145,12 +130,11 @@ a.photo_frame:hover {
     background: #fff;
     width: 32.93%;
     margin: 0 .2%;
-    border-bottom: 1px solid #fa7f00;
     min-height: 200px;
   }
   
   h5 {
-    @include fade-down(#fa7f00);
+    border: 1px solid grey;
     color: #000;
     text-align: center;
     padding: 5px;

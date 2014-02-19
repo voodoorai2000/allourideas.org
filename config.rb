@@ -3,8 +3,8 @@ require 'bootstrap-sass'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "public/stylesheets"
-sass_dir = "public/stylesheets/sass"
+css_dir = "public/stylesheets/photocracy"
+sass_dir = "public/stylesheets/photocracy/sass"
 images_dir = "public/images"
 javascripts_dir = "public/javascripts"
 
