@@ -20,13 +20,13 @@
       %p
         == #{t('questions.new.display_text')} <br />
 
-        = f.text_field 'name', :size => 80, :title => t('questions.new.step1_exp'), :class => 'required', :maxlength => Const::MAX_QUESTION_LENGTH, :placeholder => t('questions.new.step1_exp') 
+        = f.text_field 'name', :size => 80, :title => t('questions.new.step1_exp'), :class => 'form-control required', :maxlength => Const::MAX_QUESTION_LENGTH, :placeholder => t('questions.new.step1_exp') 
 
 
       %h6.no_margin= t('questions.new.step2')
       %p
         http://www.photocracy.org/
-        = f.text_field 'url', :class => 'required', :title => (@question && @question.url) || t('questions.new.step2_exp'), :placeholder => t('questions.new.step2_exp')
+        = f.text_field 'url', :class => 'form-control required', :title => (@question && @question.url) || t('questions.new.step2_exp'), :placeholder => t('questions.new.step2_exp')
       .clear
 
       -unless signed_in?
@@ -49,14 +49,14 @@
         %br
         = t('questions.new.tell_us_why2')
         %br
-        = f.text_area 'information', :cols => 60, :rows => 12
+        = f.text_area 'information', :cols => 60, :rows => 12, :class => "form-control"
 
       %p= submit_tag t('questions.new.next_step_upload_photos'), :class => 'button blue', :id => "question_create_button"
 
       #indicator.indicator{:style => "display:none;"}= image_tag('indicator.gif')
 
   .grid_4
-    %div{:style => 'margin-top:30px;padding:10px;border:1px solid #ccc;'}
+    %div{:class => 'well well-sm'}
       %h6= t('questions.new.sidebar')
       %p
         = t('questions.new.exp')
