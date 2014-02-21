@@ -1,313 +1,55 @@
 @import "config";
 @import "mixins";
 
-html, body {
-  background: $white;
-}
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 
-#hd {
-  padding-top: 1em;
-}
+// Reset
+@import "bootstrap/normalize";
+@import "bootstrap/print";
 
-h1 {
-  text-shadow: 1px 1px #ddd;
-}
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
 
-#vs {
-  color: #000;
-  margin: 0 auto;
-  @include rounded(100px);
-  font-size: 6em;
-}
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/glyphicons";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/wells";
+@import "bootstrap/close";
 
-#prompt {
-  margin-bottom: -20px;
-}
+// Components w/ JavaScript
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
 
-a.photo_frame {
-  display: block;
-  height: 350px;
-  width: 100%;
-  overflow: hidden;
-  text-decoration: none;
-  position:relative;
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
 
-  table {
-    text-align:center;
-    valign:middle;
-    height:100%;
-    width:100%;
-    border:none;
-    padding:none;
-    position:absolute;
-    top:0px;
-    left:0px;
-
-    &.fade {
-      z-index:2;
-    }
-    
-    &.current {
-      z-index:1;
-    }
-
-    td, tr {
-      vertical-align:middle;
-    }
-  }
-  
- 
-  
-  &.loading img {
-    border: none;
-  }
-  
-  &.checked .fade img {
-    border: 3px solid #fa7f00;
-  }
-}
-
-a.photo_frame:hover {
-  cursor: pointer;
-}
-
-.click_to_vote {
-  position: relative;
-  top: 40%;
-  z-index: 5;
-  text-align: center;
-  color: #000;
-  background:#fff;
-  opacity: 0.8;
-  width: 160px;
-  margin: 0 auto;
-  padding: 5px;
-  font-size: 20px;
-  font-weight: bold;
-
-}
-
-.button {
-  padding: .5em 2.5em;
-  @include marble-fade();
-  border: 1px solid #666;
-  font-weight: bold;
-  color: #333;
-  font-size: 17px;
-  text-shadow: #fff -2px 0px 10px;
-  display: inline-block;
-  text-decoration: none;
-
-}
-
-.button:hover {
-  background: #fff;
-  text-shadow: none;
-  border: 1px solid #333; 
-}
-
-.button.blue {
-  color: #000;
-}
-
-.button.blue:hover {
-  border: 1px solid #235a9b;
-}
-
-.button.green {
-  font-size:20px;
-  border: 1px solid #698D00;
-  color: #fff;
-}
-
-.button.green:hover {
-  @include marble-fade(lighten(#698D00, 5%));
-  border: 1px solid #fff;
-}
-
-#secondary_content {
-  .grid_4 {
-    background: #fff;
-    width: 32.93%;
-    margin: 0 .2%;
-    min-height: 200px;
-  }
-  
-  h5 {
-    border: 1px solid grey;
-    color: #000;
-    text-align: center;
-    padding: 5px;
-    text-shadow: #fff 1px 1px 2px;
-  }
-  
-  img {
-    vertical-align: middle;
-  }
-}
-
-ul#your_votes {
-  margin: 0;
-  list-style-type: none;
-  zoom: 1;
-  
-  li {
-    text-align:center;
-    zoom: 1;
-    padding: 5px;
-    margin: 0;
-  }
-  
-  img.winner {}
-  img.loser {opacity:0.5;}
-}
-
-
-ul.results {
-  list-style-type: none;
-  
-  li {
-    margin: 0;
-    padding: .5em;
-
-    a {
-      padding: .5em;
-      -moz-border-radius: 5px;
-      display: inline-block;
-      @include rounded(5px);
-    }
-
-    a.active, a.active:hover {
-        text-decoration: none;
-        background: #fa7f00;
-        font-weight: bold;
-        color: #fff;
-    }
-
-    a:hover {
-      background: #ccc;
-    }
-
-  }
-}
-
-p.results_label {
-  font-weight: normal;
-  text-transform: uppercase;
-  margin: 0;
-  color: #666;
-}
-
-p.score_explanation {
-  font-style: italic;
-  color: #666;
-}
-
-#results #hd {
-	text-align: center;
-	position: fixed;
-	top: 0px;
-	width: 100%;
-	background: #eee url(../../images/photocracy/hd_fade.png) bottom repeat-x;
-}
-
-#ft {
-	margin-top: 2em;
-  color: #999;
-  text-align: center;
-  padding: 1em;
-  
-  a {
-    color: #666;
-  }
-}
-
-#flash {
-  color:red;
-}
-
-#flash .notice{
-  padding: 10px;
-  background: #ffffcb;
-}
-
-#results #primary_content {
-  margin-top: 8em;
-}
-
-.chosen {
-	background: url(../../images/photocracy/chosen.png) center center no-repeat !important;
-}
-
-table.admin {
-  th {
-    padding: 10px;
-  }
-
-  td {
-    line-height: 50px;
-    padding: 10px;
-  }
-  
-  img {
-    vertical-align: middle;
-  }
-}
-
-.blue_fade {
-  zoom: 1;
-  color: #fff;
-  @include fade(#354F68, #637F96);
-}
-
-strong, .strong {
-  font-weight:bold;
-}
-
-.center {
-  text-align: center;
-}
-
-.no_margin {
-  margin: 0;
-}
-
-.padding {
-  padding: 1em;
-}
-
-.normal {
-  font-weight: normal;
-}
-
-.float_left {
-  float: left;
-  margin-right: 10px
-}
-
-.float_right {
-  float: right;
-  margin-left: 10px
-}
-
-.margin_bottom {
-  overflow: hidden;
-  margin-bottom: 2em;
-}
-
-.small_margin_bottom {
-  margin-bottom: 5px;
-}
-
-.gray, a.gray, .Deactivated, .deactivated {
-  color: #666;
-}
-
-.microcopy {
-  color: #666;
-  font-size: .8em
-}
-
-.errorExplanation {
-  color: red;
-}
+// Old layout
+@import "layout";
